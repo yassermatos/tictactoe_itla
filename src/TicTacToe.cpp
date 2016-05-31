@@ -7,7 +7,7 @@ char player = 'X';
 
 bool isAvailable(int row, int column)
 {
-	//TODO: Implement this code so that it tells the user whether or not he can play in the selected cell
+	
 	return true;
 }
 
@@ -46,12 +46,54 @@ bool validate(int number)
 
 bool gameover()
 {
-	//TODO: Implement this method,verify if any player has won the match of it's being a tie.
-	//Return true if the game is over. Print message informing the user about what just happened.
-	if(false){ // change this with a real condition
-		cout << "You loose" << endl;
-	}
-	return false;
+	plays++
+
+    if (plays > 5 ) {
+
+    if(board[1][1] == board[1][2] && board[1][2] == board[1][3])
+        {
+        cout << "player " <<winner <<" Win << endl;
+        return true;
+        }
+    else if(board[2][1]  board[2][2] && board[2][2] == board[2][3])
+        {
+        cout << "player " <<winner <<" Win << endl;
+        return true;
+        }
+    else if(board[3][1] == board[3][2] && board[3][2] == board[3][3])
+        {
+        cout << "player " <<winner <<" Win << endl;
+        return true;
+        }
+    else if(board[1][1] == board[2][1] && board[2][1] == board[3][1])
+        {
+        cout << "player " <<winner <<" Win << endl;
+        return true;
+        }
+    else if(board[1][2] == board[2][2] && board[2][2] == board[3][2])
+        {
+        cout << "player " <<winner <<" Win << endl;
+        return true;
+        }
+    else if(board[1][3] == board[2][3] && board[2][3] == board[3][3])
+        {
+        cout << "player " <<winner <<" Win << endl;
+        return true;}
+    else if(board[1][1] == board[2][2] && board[2][2] == board[3][3])
+        {
+        cout << "player " <<winner <<" Win << endl;
+        return true;}
+    else if(board[1][3] == board[2][2] && board[2][2] == board[3][1])
+        {
+        cout << "player " <<winner <<" Win << endl;
+        return true;}
+
+        }
+
+    else {
+        return false;
+    }
+
 }
 
 bool isValidInput(istream& in){
